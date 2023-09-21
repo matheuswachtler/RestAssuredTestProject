@@ -83,13 +83,31 @@ After creating the folder, using a terminal, navigate to the location where you 
 
 ![image](https://github.com/matheuswachtler/RestAssuredTestProject/assets/76985572/dc23721c-bf97-42ad-9a51-6a43bc7939a0)
 
-
-
-
-
+Now that you've accessed the folder through the terminal, simply copy the following code and paste it into the terminal to make a copy of the project in the desired location.
 
 ```bash
 git clone https://github.com/matheuswachtler/RestAssuredTestProject.git
 ```
 
-After copying the project to your machine, you can run the tests in various different ways, which include:
+![image](https://github.com/matheuswachtler/RestAssuredTestProject/assets/76985572/b5e17811-cc75-48bc-b474-6f9e590590c2)
+
+# Running tests
+
+To run the tests, in the terminal, navigate to the project's root folder (where the pom.xml file is located).
+
+Use the 'ls' command to list all the files present in the directory you are in within the terminal.
+
+![image](https://github.com/matheuswachtler/RestAssuredTestProject/assets/76985572/1fdb80ed-e3fe-4def-9630-e0b8bbe58aaf)
+
+Now that you are in the project's root folder, simply type the 'mvn clean verify' command, and all the tests will be executed.
+
+```bash
+mvn clean verify
+```
+![image](https://github.com/matheuswachtler/RestAssuredTestProject/assets/76985572/dc57faee-9ee3-46c5-96d1-2ae833b44e87)
+
+![image](https://github.com/matheuswachtler/RestAssuredTestProject/assets/76985572/3c043091-ca9e-4b33-8941-9dac84adfe51)
+
+
+If you have any questions about the mentioned commands, just go to the last topic. There, I will leave a list with links to the documentation that can help you.
+
