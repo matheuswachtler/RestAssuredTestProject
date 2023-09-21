@@ -61,7 +61,7 @@ This project uses Maven for dependency management and application build.
 | guava | 32.1.2-jre |
 | Junit-jupiter | 5.10.0 |
 | junit-jupiter-params | 5.10.0 |
-| Java JDK | 19.0.2 |
+| Java JDK | 17.0.8 |
 
 
 
@@ -120,7 +120,7 @@ I will leave a list with links to all the documentation of the technologies used
 * [JUnit 5 Documentation](https://junit.org/junit5/docs/current/user-guide/)
 * [Maven Documentation](https://maven.apache.org/)
 * [Git Documentation](https://docs.github.com/pt/get-started/using-git/about-git)
-* [Java Documentation](https://www.oracle.com/java/technologies/javase/jdk19-archive-downloads.html)
+* [Java Documentation](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html)
 
 # Contact
 
