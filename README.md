@@ -109,5 +109,19 @@ mvn clean verify
 ![image](https://github.com/matheuswachtler/RestAssuredTestProject/assets/76985572/3c043091-ca9e-4b33-8941-9dac84adfe51)
 
 
-If you have any questions about the mentioned commands, just go to the last topic. There, I will leave a list with links to the documentation that can help you.
+# Where to get answers
 
+I will leave a list with links to all the documentation of the technologies used in the project
+
+* [DummyJSON](https://dummyjson.com/docs/products)
+* [Rest-Assured](https://rest-assured.io/)
+* [JUnit 5 Documentation](https://junit.org/junit5/docs/current/user-guide/)
+* [Maven Documentation](https://maven.apache.org/)
+* [Git Documentation](https://docs.github.com/pt/get-started/using-git/about-git)
+* [Java Documentation](https://www.oracle.com/java/technologies/javase/jdk19-archive-downloads.html)
+
+# Contact
+
+Developed by Matheus Wachtler
+
+[LinkedIn](https://www.linkedin.com/in/matheus-wachtler-a9a92911a/)
