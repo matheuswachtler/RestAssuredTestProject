@@ -77,11 +77,12 @@ To start the tests, you'll first need to have the project on your machine.
 
 Create a folder on your machine where you want to store the project.
 
-![image](https://github.com/matheuswachtler/RestAssuredTestProject/assets/76985572/d3ab41d8-33bf-4ff9-8e55-6d6054fca102)
+![image](https://github.com/matheuswachtler/RestAssuredTestProject/assets/76985572/b12f28a8-3d81-4d9a-bc7a-8df47fca8e6e)
 
 After creating the folder, using a terminal, navigate to the location where you created it using the 'cd' command.
 
-![image](https://github.com/matheuswachtler/RestAssuredTestProject/assets/76985572/dc23721c-bf97-42ad-9a51-6a43bc7939a0)
+![image](https://github.com/matheuswachtler/RestAssuredTestProject/assets/76985572/3d4c2817-cb16-47c1-9bbb-1290dedc3012)
+
 
 Now that you've accessed the folder through the terminal, simply copy the following code and paste it into the terminal to make a copy of the project in the desired location.
 
@@ -89,7 +90,8 @@ Now that you've accessed the folder through the terminal, simply copy the follow
 git clone https://github.com/matheuswachtler/RestAssuredTestProject.git
 ```
 
-![image](https://github.com/matheuswachtler/RestAssuredTestProject/assets/76985572/b5e17811-cc75-48bc-b474-6f9e590590c2)
+![image](https://github.com/matheuswachtler/RestAssuredTestProject/assets/76985572/4a4273e7-c5d1-4a38-a760-2cac517ad25b)
+
 
 # Running tests
 
@@ -97,16 +99,16 @@ To run the tests, in the terminal, navigate to the project's root folder (where 
 
 Use the 'ls' command to list all the files present in the directory you are in within the terminal.
 
-![image](https://github.com/matheuswachtler/RestAssuredTestProject/assets/76985572/1fdb80ed-e3fe-4def-9630-e0b8bbe58aaf)
+![image](https://github.com/matheuswachtler/RestAssuredTestProject/assets/76985572/69465ff2-8f6d-412d-adb3-c1ea76240a6e)
 
 Now that you are in the project's root folder, simply type the 'mvn clean verify' command, and all the tests will be executed.
 
 ```bash
 mvn clean verify
 ```
-![image](https://github.com/matheuswachtler/RestAssuredTestProject/assets/76985572/dc57faee-9ee3-46c5-96d1-2ae833b44e87)
+![image](https://github.com/matheuswachtler/RestAssuredTestProject/assets/76985572/74f8a4de-fb05-43d8-94d4-962274b8bd0b)
 
-![image](https://github.com/matheuswachtler/RestAssuredTestProject/assets/76985572/3c043091-ca9e-4b33-8941-9dac84adfe51)
+![image](https://github.com/matheuswachtler/RestAssuredTestProject/assets/76985572/876a6032-f9c7-415a-88e9-761f0890ba33)
 
 
 # Where to get answers
