@@ -1,0 +1,117 @@
+{
+  "type": "object",
+  "properties": {
+    "id": { "type": "integer" },
+    "firstName": { "type": "string" },
+    "lastName": { "type": "string" },
+    "maidenName": { "type": "string" },
+    "age": { "type": "integer" },
+    "gender": { "type": "string" },
+    "email": { "type": "string", "format": "email" },
+    "phone": { "type": "string" },
+    "username": { "type": "string" },
+    "password": { "type": "string" },
+    "birthDate": { "type": "string", "format": "date" },
+    "image": { "type": "string", "format": "uri" },
+    "bloodGroup": { "type": "string" },
+    "height": { "type": "number" },
+    "weight": { "type": "number" },
+    "eyeColor": { "type": "string" },
+    "hair": {
+      "type": "object",
+      "properties": {
+        "color": { "type": "string" },
+        "type": { "type": "string" }
+      }
+    },
+    "domain": { "type": "string" },
+    "ip": { "type": "string", "format": "ipv4" },
+    "address": {
+      "type": "object",
+      "properties": {
+        "address": { "type": "string" },
+        "city": { "type": "string" },
+        "coordinates": {
+          "type": "object",
+          "properties": {
+            "lat": { "type": "number" },
+            "lng": { "type": "number" }
+          }
+        },
+        "postalCode": { "type": "string" },
+        "state": { "type": "string" }
+      }
+    },
+    "macAddress": { "type": "string" },
+    "university": { "type": "string" },
+    "bank": {
+      "type": "object",
+      "properties": {
+        "cardExpire": { "type": "string" },
+        "cardNumber": { "type": "string" },
+        "cardType": { "type": "string" },
+        "currency": { "type": "string" },
+        "iban": { "type": "string" }
+      }
+    },
+    "company": {
+      "type": "object",
+      "properties": {
+        "address": {
+          "type": "object",
+          "properties": {
+            "address": { "type": "string" },
+            "city": { "type": "string" },
+            "coordinates": {
+              "type": "object",
+              "properties": {
+                "lat": { "type": "number" },
+                "lng": { "type": "number" }
+              }
+            },
+            "postalCode": { "type": "string" },
+            "state": { "type": "string" }
+          }
+        },
+        "department": { "type": "string" },
+        "name": { "type": "string" },
+        "title": { "type": "string" }
+      }
+    },
+    "ein": { "type": "string" },
+    "ssn": { "type": "string" },
+    "userAgent": { "type": "string" },
+    "isDeleted": { "type": "boolean" },
+    "deletedOn": { "type": "string", "format": "date-time" }
+  },
+  "required": [
+    "id",
+    "firstName",
+    "lastName",
+    "age",
+    "gender",
+    "email",
+    "phone",
+    "username",
+    "password",
+    "birthDate",
+    "image",
+    "bloodGroup",
+    "height",
+    "weight",
+    "eyeColor",
+    "hair",
+    "domain",
+    "ip",
+    "address",
+    "macAddress",
+    "university",
+    "bank",
+    "company",
+    "ein",
+    "ssn",
+    "userAgent",
+    "isDeleted",
+    "deletedOn"
+  ]
+}
