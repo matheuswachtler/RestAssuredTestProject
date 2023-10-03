@@ -9,11 +9,6 @@ In this project, I chose to automate tests on the public API  <a href="https://d
 
 DummyJSON is a widely used fake RestFull API for testing with automation tools.
 
-Hope you enjoy it, feel free to reach out to me.
-
-A link to my LinkedIn profile will be available at the bottom of the page.
-
-
 
 # About the project
 
