@@ -14,9 +14,9 @@ public class TokenManager {
                 given()
                         .contentType(ContentType.JSON)
                         .body(REQUEST_BODY)
-                        .when()
+                .when()
                         .post(GET_TOKEN_ENDPOINT)
-                        .then()
+                .then()
                         .extract()
                         .path("token");
     }
