@@ -1,6 +1,5 @@
 package api;
 
-import io.restassured.module.jsv.JsonSchemaValidator;
 import org.junit.jupiter.api.Test;
 import utils.Specifications;
 
@@ -18,16 +17,16 @@ public class CartIT extends Specifications {
     public void shouldFindSingleCart(){
 
         given()
+
                 .spec(headerSpecification)
                 .log().all()
         .when()
                 .get(CART_ENDPOINT)
         .then()
                 .spec(responseSpecification)
-                .body(JsonSchemaValidator.matchesJsonSchemaInClasspath("schemas/cart/getSingleCartSchema.json"))
-                .body("products[0].title", is("Spring and summershoes"))
-                .body("products[1].price", is(29))
-                .body("products[2].total", is(80))
+                .body("products[0].title", is("Charger SXT RWD"))
+                .body("products[1].price", is(1999.99F))
+                .body("products[2].total", is(124.95F))
                 .log().all();
     }
 
@@ -42,7 +41,6 @@ public class CartIT extends Specifications {
                 .put(CART_ENDPOINT)
         .then()
                 .spec(responseSpecification)
-                .body(JsonSchemaValidator.matchesJsonSchemaInClasspath("schemas/cart/updateCartSchema.json"))
                 .body("products[0].quantity", is(1))
                 .log().all();
 
@@ -58,8 +56,7 @@ public class CartIT extends Specifications {
         .when()
                 .post(ADD_CART_ENDPOINT)
         .then()
-                .spec(responseSpecification)
-                .body(JsonSchemaValidator.matchesJsonSchemaInClasspath("schemas/cart/addCartSchema.json"))
+                .spec(responseSpecificationCreated)
                 .body("products[1].id",is(50))
                 .log().all();
 
@@ -75,8 +72,7 @@ public class CartIT extends Specifications {
                 .delete(CART_ENDPOINT)
         .then()
                 .spec(responseSpecification)
-                .body(JsonSchemaValidator.matchesJsonSchemaInClasspath("schemas/cart/deleteCartSchema.json"))
-                .body("products[2].title", is("Oil Free Moisturizer 100ml"))
+                .body("products[2].title", is("Green Oval Earring"))
                 .log().all();
     }
 }

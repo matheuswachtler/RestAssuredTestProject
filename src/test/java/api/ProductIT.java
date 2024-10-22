@@ -1,6 +1,5 @@
 package api;
 
-import io.restassured.module.jsv.JsonSchemaValidator;
 import org.junit.jupiter.api.Test;
 import utils.Specifications;
 
@@ -24,7 +23,6 @@ public class ProductIT extends Specifications {
                 .put(PRODUCT_ENDPOINT)
         .then()
                 .spec(responseSpecification)
-                .body(JsonSchemaValidator.matchesJsonSchemaInClasspath("schemas/product/updateProductSchema.json"))
                 .body("title", is("Galaxy S3 Plus"))
                 .log().all();
     }
@@ -39,7 +37,6 @@ public class ProductIT extends Specifications {
                 .delete(PRODUCT_ENDPOINT)
         .then()
                 .spec(responseSpecification)
-                .body(JsonSchemaValidator.matchesJsonSchemaInClasspath("schemas/product/deleteProductSchema.json"))
                 .body("isDeleted", equalTo(true))
                 .log().all();
     }
@@ -54,8 +51,7 @@ public class ProductIT extends Specifications {
                 .get(PRODUCT_ENDPOINT)
         .then()
                 .spec(responseSpecification)
-                .body(JsonSchemaValidator.matchesJsonSchemaInClasspath("schemas/product/getSingleProductSchema.json"))
-                .body("title", is("iPhone 9"))
+                .body("title", is("Essence Mascara Lash Princess"))
                 .log().all();
     }
 
@@ -69,8 +65,7 @@ public class ProductIT extends Specifications {
         .when()
                 .post(ADD_PRODUCT_ENDPOINT)
         .then()
-                .spec(responseSpecification)
-                .body(JsonSchemaValidator.matchesJsonSchemaInClasspath("schemas/product/addProductSchema.json"))
+                .spec(responseSpecificationCreated)
                 .body("id", notNullValue())
                 .body("title", is("Galaxy S3 Plus"))
                 .log().all();

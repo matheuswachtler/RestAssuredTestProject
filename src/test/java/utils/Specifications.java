@@ -10,8 +10,9 @@ import org.junit.jupiter.api.BeforeAll;
 public class Specifications {
 
     public static RequestSpecification headerSpecification;
-
     public static ResponseSpecification responseSpecification;
+
+    public static ResponseSpecification responseSpecificationCreated;
 
     public static final String BASE_ENDPOINT = "https://dummyjson.com/";
 
@@ -22,6 +23,11 @@ public class Specifications {
                         .setBaseUri(BASE_ENDPOINT)
                         .setContentType(ContentType.JSON)
                         .addHeader("Authorization", TokenManager.getAuthToken())
+                        .build();
+
+        responseSpecificationCreated = new ResponseSpecBuilder()
+                        .expectStatusCode(201)
+                        .expectContentType(ContentType.JSON)
                         .build();
 
         responseSpecification = new ResponseSpecBuilder()

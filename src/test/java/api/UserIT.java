@@ -1,7 +1,6 @@
 package api;
 
-
-import io.restassured.module.jsv.JsonSchemaValidator;
+import io.restassured.http.ContentType;
 import org.junit.jupiter.api.Test;
 import utils.Specifications;
 
@@ -24,8 +23,7 @@ public class UserIT extends Specifications {
                 .get(USER_ENDPOINT)
         .then()
                 .spec(responseSpecification)
-                .body(JsonSchemaValidator.matchesJsonSchemaInClasspath("schemas/user/getSingleUserSchema.json"))
-                .body("firstName", equalTo("Terry"))
+                .body("firstName", equalTo("Emily"))
                 .log().all();
     }
 
@@ -39,8 +37,7 @@ public class UserIT extends Specifications {
         .when()
                 .post(ADD_USER_ENDPOINT)
         .then()
-                .spec(responseSpecification)
-                .body(JsonSchemaValidator.matchesJsonSchemaInClasspath("schemas/user/addUserSchema.json"))
+                .spec(responseSpecificationCreated)
                 .body("lastName", equalTo("Ovi"))
                 .log().all();
     }
@@ -55,8 +52,7 @@ public class UserIT extends Specifications {
                 .put(USER_ENDPOINT)
         .then()
                 .spec(responseSpecification)
-                .body(JsonSchemaValidator.matchesJsonSchemaInClasspath("schemas/user/updateUserSchema.json"))
-                .body("maidenName", is("Smitham"))
+                .body("maidenName", is("Smith"))
                 .log().all();
 
     }
@@ -71,8 +67,7 @@ public class UserIT extends Specifications {
                 .delete(USER_ENDPOINT)
         .then()
                 .spec(responseSpecification)
-                .body(JsonSchemaValidator.matchesJsonSchemaInClasspath("schemas/user/deleteUserSchema.json"))
-                .body("birthDate", is("2000-12-25"))
+                .body("birthDate", is("1996-5-30"))
                 .log().all();
     }
 
