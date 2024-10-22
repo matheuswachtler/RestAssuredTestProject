@@ -14,8 +14,14 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <rest-assured.version>5.5.0</rest-assured.version>
         <commons-codec.version>1.17.1</commons-codec.version>
-        <jackson-databind.version>2.15.2</jackson-databind.version>
         <maven-failsafe-plugin.version>3.1.2</maven-failsafe-plugin.version>
+        <au.com.dius.pact.consumer.version>4.6.14</au.com.dius.pact.consumer.version>
+        <com.google.code.gson.version>2.11.0</com.google.code.gson.version>
+        <com.google.guava.version>33.3.1-jre</com.google.guava.version>
+        <org.apache.commons.4.version>4.5.0-M2</org.apache.commons.4.version>
+        <io.ktor.version>3.0.0</io.ktor.version>
+        <io.netty.version>4.1.114.Final</io.netty.version>
+        <org.apache.commons.version>1.27.1</org.apache.commons.version>
     </properties>
 
     <dependencyManagement>
@@ -46,12 +52,6 @@
         </dependency>
 
         <dependency>
-            <groupId>commons-codec</groupId>
-            <artifactId>commons-codec</artifactId>
-            <version>${commons-codec.version}</version>
-        </dependency>
-
-        <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
             <scope>test</scope>
@@ -63,8 +63,71 @@
             <scope>test</scope>
         </dependency>
 
-    </dependencies>
+        <dependency>
+            <groupId>au.com.dius.pact.consumer</groupId>
+            <artifactId>junit5</artifactId>
+            <version>${au.com.dius.pact.consumer.version}</version>
+        </dependency>
 
+
+        <!-- Dependency for PACT vulnerability fix-->
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>${com.google.code.gson.version}</version>
+        </dependency>
+
+        <!-- Dependency for PACT vulnerability fix-->
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>${com.google.guava.version}</version>
+        </dependency>
+
+        <!-- Dependency for PACT vulnerability fix-->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-collections4</artifactId>
+            <version>${org.apache.commons.4.version}</version>
+        </dependency>
+
+        <!-- Dependency for PACT vulnerability fix-->
+        <dependency>
+            <groupId>io.ktor</groupId>
+            <artifactId>ktor-http-jvm</artifactId>
+            <version>3.0.0</version>
+        </dependency>
+
+        <!-- Dependency for PACT vulnerability fix-->
+        <dependency>
+            <groupId>io.ktor</groupId>
+            <artifactId>ktor-network-tls-jvm</artifactId>
+            <version>3.0.0</version>
+        </dependency>
+
+        <!-- Dependency for PACT vulnerability fix-->
+        <dependency>
+            <groupId>io.ktor</groupId>
+            <artifactId>ktor-server-core</artifactId>
+            <version>${io.ktor.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+
+        <!-- Dependency for PACT vulnerability fix-->
+        <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-codec-http2</artifactId>
+            <version>${io.netty.version}</version>
+        </dependency>
+
+        <!-- Dependency for PACT vulnerability fix-->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-compress</artifactId>
+            <version>${org.apache.commons.version}</version>
+        </dependency>
+
+    </dependencies>
 
     <build>
         <plugins>
